@@ -30,5 +30,15 @@ musical.addEventListener('dragstart', dragStart, false);
 
 let target = document.querySelector('#target-container');
 target.addEventListener('drop', dropped, false);
+target.addEventListener('drop', moveTitle, false);
 target.addEventListener('dragenter', cancel, false);
 target.addEventListener('dragover', cancel, false);
+
+let songTitle = document.querySelector('.title');
+function moveTitle() {
+  let newElement = document.createElement('p');
+  newElement.className = 'newTitle';
+  newElement.textContent = songTitle.innerText;
+  target.appendChild(newElement);
+
+}
