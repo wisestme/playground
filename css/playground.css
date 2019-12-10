@@ -1,3 +1,6 @@
+body {
+  font-family: 'gothamc'; 
+}
 [data-role="drag-drop-target"] {
   float: left;
   width: 60%;
@@ -8,6 +11,11 @@
   border-radius: 4px;
   opacity: 0.4;
   max-width: 350px;
+}
+
+@font-face {
+  font-family: 'gothamc';
+  src: url('../fonts/Gotham_XNarrow_Medium.otf');
 }
 
 .over {
