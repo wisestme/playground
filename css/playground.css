@@ -32,8 +32,9 @@ body {
 
 ul {
   display: flex;
-  flex-wrap: wrap-reverse;
-
+  flex-wrap: wrap;
+  justify-content: center;
+  
 }
 
 li {
@@ -42,6 +43,10 @@ li {
   background-color: #aa8821;
   margin: 2em;
   list-style: none;
+}
+
+.friday {
+  order: -1;
 }
 
 
