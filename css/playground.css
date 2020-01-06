@@ -13,6 +13,10 @@ body {
   max-width: 350px;
 }
 
+.clear {
+  clear: both;
+}
+
 @font-face {
   font-family: 'gothamc';
   src: url('../fonts/Gotham_XNarrow_Medium.otf');
