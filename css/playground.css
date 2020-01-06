@@ -30,6 +30,20 @@ body {
   opacity: 0.25;
 }
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  width: 70px;
+  height: 70px;
+  background-color: #aa8821;
+  margin: 2em;
+  list-style: none;
+}
+
+
 /***************************************************************
 * ANIMATIONS
 */
