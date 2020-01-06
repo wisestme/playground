@@ -38,7 +38,7 @@ ul {
 }
 
 li {
-  width: 70px;
+  width: 900px;
   height: 70px;
   background-color: #aa8821;
   margin: 2em;
@@ -47,6 +47,8 @@ li {
 
 .friday {
   order: -1;
+  
+  flex-shrink: 2;
 }
 
 
