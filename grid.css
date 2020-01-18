@@ -1,0 +1,7 @@
+.wrapper > div {
+	background-color: #eee;
+}
+
+.wrapper >div:nth-child(odd) {
+	background-color: #ccc;
+}
