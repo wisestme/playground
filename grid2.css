@@ -1,0 +1,30 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/*grid-row-gap: 0.5em;*/
+	grid-gap: 1em;
+	grid-auto-rows: 100px;
+	grid-auto-rows: minmax(100px, auto);
+
+}
+
+.nested {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1em;
+	grid-auto-rows: 100px;
+}
+
+.wrapper > div {
+	background: #eee;
+}
+
+.nested > div {
+	border: 2px solid #f00;
+}
+
+.wrapper > div:nth-child(odd) {
+	background: #ddd;
+
+}
+
