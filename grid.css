@@ -12,3 +12,40 @@
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
 }
+
+.container {
+	display: grid;
+	grid-template-columns: 100px 200px 150px;
+	grid-gap: 0.5em;
+	
+}
+
+.container > div {
+	background: #6ab;
+}
+
+.container > div:nth-child(odd) {
+	background: #ab6;
+}
+
+.f {
+	grid-area: 1/2/span 3/3;
+}
+/***************************************************
+*/
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.header { grid-area: header; }
+.footer { grid-area: footer; }
+
+.bucket {
+display: grid;
+grid-template-columns: 200px 10px 200px 10px »
+200px;
+grid-template-rows: auto;
+grid-template-areas:
+"header header header header header"
+"sidebar . content content content"
+"footer footer footer footer footer"
+}
+Code example:
