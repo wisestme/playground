@@ -4,11 +4,21 @@
 
 .wrapper >div:nth-child(odd) {
 	background-color: #ccc;
+	margin-bottom: 0.5em;
+	position: relative;
+	top: 2em;
+}
+
+.wrapper >div:nth-child(even) {
+	background-color: #ccc;
+	position: relative;
+	top: 1em;
+	
 }
 
 .wrapper {
 	display: grid;
-	grid-template-columns: 30% 20% 10% 10% 20%;
+	grid-template-columns: 30% 20% 20%;
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
 }
@@ -48,4 +58,45 @@ grid-template-areas:
 "sidebar . content content content"
 "footer footer footer footer footer"
 }
-Code example:
+
+/***************************************************
+*/
+
+/*.grid-container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 20% 30% 100px;
+	grid-template-rows: 20% 50%;
+	justify-content: space-between;
+	align-content: space-around;
+	height: 100vh;
+}
+*/
+.grid-item {
+	background: #500;
+}
+
+.item2 {
+	grid-column: 2/span 2;
+	grid-row: 3/span 2;
+}
+
+.item4 {
+	grid-area: 2/1/span 2/span 3
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+	display: grid;
+	grid-gap: 10px;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'menu footer footer footer footer right'
+    'menu . . . . right';
+}
