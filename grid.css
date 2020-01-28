@@ -4,15 +4,14 @@
 
 .wrapper >div:nth-child(odd) {
 	background-color: #ccc;
-	margin-bottom: 0.5em;
-	position: relative;
-	top: 2em;
+	margin-bottom: 1em;
+	transform: translateY(30px);
+	
 }
 
 .wrapper >div:nth-child(even) {
 	background-color: #ccc;
-	position: relative;
-	top: 1em;
+	
 	
 }
 

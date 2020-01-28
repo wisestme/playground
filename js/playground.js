@@ -40,5 +40,20 @@ function moveTitle() {
   newElement.className = 'newTitle';
   newElement.textContent = songTitle.innerText;
   target.appendChild(newElement);
-
 }
+
+/************************************************************
+*/
+// ES6
+let x = 1;
+if (x === 1) {
+  let x = 2;
+  console.log(x);
+}
+
+console.log(x);
+
+let funcName = ()  => console.log('me');
+
+
+funcName();
