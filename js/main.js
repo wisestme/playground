@@ -6,4 +6,6 @@ $('li:last-child').css('color', '#a1f');
 $('li:even').css('color', '#1af');
 $(':submit').hide();
 $('[href]').css('color', '#1af');
+$('[href="https://yahoo.com"]').css('color', '#1fa');
+
 
