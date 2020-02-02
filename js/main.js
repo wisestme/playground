@@ -8,4 +8,9 @@ $('li:even').css('color', '#1af');
 $('[href]').css('color', '#1af');
 $('[href="https://yahoo.com"]').css('color', '#1fa');
 
-
+/*****************************************************
+EVENTS
+*/
+$('#btn1').click(function(){
+	alert('Button Clicked!');
+});
