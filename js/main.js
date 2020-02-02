@@ -5,4 +5,5 @@ $('li:first-child').css('color', '#f1a');
 $('li:last-child').css('color', '#a1f');
 $('li:even').css('color', '#1af');
 $(':submit').hide();
+$('[href]').css('color', '#1af');
 
