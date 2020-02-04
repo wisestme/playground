@@ -10,6 +10,8 @@ function getQuestion(){
 
     // grab the UI for questions
      var question = document.getElementById('questionUI');
+
+     // create p element for question
      let paraQuestion = document.createElement('p');
      
      
@@ -19,10 +21,29 @@ function getQuestion(){
      //question.innerHTML = yourQuestion;
      question.appendChild(paraQuestion);
      paraQuestion.innerHTML = yourQuestion;
+
+     // convert options object into an array
+     let allOptions = Object.values(allQuestions.option);
+
+     // create array of list elements
+     let optionUI = document.querySelector(".options").childNodes;
+     let listOptions = [];
+
+     for (let i = 0; i < optionUI.length; i++) {
+      let child = optionUI[i];
+      if (child.nodeType == 1) {
+        listOptions.push(child);
+      }
+     }
+
      
      //console.log(this.question);
     console.log(data);
     console.log(question);
+    console.log(allOptions);
+    console.log(optionUI);
+    console.log(listOptions);
+
   })
   .catch(err => {
     // Do something for an error here
