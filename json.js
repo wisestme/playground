@@ -25,10 +25,10 @@ function getQuestion(){
      // convert options object into an array
      let allOptions = Object.values(allQuestions.option);
 
-     // create array of list elements
+  // create array of list elements
      let optionUI = document.querySelector(".options").childNodes;
      let listOptions = [];
-
+     // loop through childNodes
      for (let i = 0; i < optionUI.length; i++) {
       let child = optionUI[i];
       if (child.nodeType == 1) {
@@ -36,13 +36,17 @@ function getQuestion(){
       }
      }
 
+      // Match options to list elements
+       for(let j = 0; j < listOptions.length; j++) {
+        listOptions[j].textContent = allOptions[j];
+      }
      
      //console.log(this.question);
     console.log(data);
     console.log(question);
-    console.log(allOptions);
+    console.log(typeof (allOptions[0]));
     console.log(optionUI);
-    console.log(listOptions);
+    console.log(listOptions[0]);
 
   })
   .catch(err => {
