@@ -10,10 +10,15 @@ function getQuestion(){
 
     // grab the UI for questions
      var question = document.getElementById('questionUI');
+     let paraQuestion = document.createElement('p');
+     
      
      // Display question to UI
      const yourQuestion = allQuestions.question
-     question.innerHTML = yourQuestion;
+     //question.appendChild(allQuestions.question)
+     //question.innerHTML = yourQuestion;
+     question.appendChild(paraQuestion);
+     paraQuestion.innerHTML = yourQuestion;
      
      //console.log(this.question);
     console.log(data);
