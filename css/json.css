@@ -1,3 +1,11 @@
 li {
 	list-style: lower-alpha;
 }
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}

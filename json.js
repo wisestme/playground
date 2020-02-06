@@ -63,9 +63,12 @@ getQuestion();
 
 //console.log(createdPara)
 document.querySelector('button').addEventListener('click', function(){
-  var createdPara = document.querySelector('#questionUI p')
+  var createdPara = document.querySelectorAll('#questionUI p')
   //createdPara.style.display = 'none';
-  createdPara.classList.add('hide');
+  for(var i = 0; i < createdPara.length; i++){
+    createdPara[i].classList.add('hide');
+  }
+  
   getQuestion();
   console.log('test is my name')
 })
