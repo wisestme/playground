@@ -64,7 +64,9 @@ getQuestion();
 //console.log(createdPara)
 document.querySelector('button').addEventListener('click', function(){
   var createdPara = document.querySelector('#questionUI p')
-  createdPara.style.display = 'none';
+  //createdPara.style.display = 'none';
+  createdPara.classList.add('hide');
+  getQuestion();
   console.log('test is my name')
 })
 
