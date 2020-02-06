@@ -67,7 +67,10 @@ var choice = document.querySelector('#answer');
       console.log(choice.value);
     }
 
-
+// Clear answer field
+  function clearAnswer() { 
+      choice.value = '';
+    }
 
 // 
 document.querySelector('button').addEventListener('click', function(){
@@ -85,7 +88,7 @@ document.querySelector('button').addEventListener('click', function(){
   }
   getQuestion();
   getChoice();
-  //clearAnswer();
+  clearAnswer();
   console.log('test is my name')
 })
 
