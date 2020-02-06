@@ -5,6 +5,7 @@ function getQuestion(){
   })
   .then(data => {
     // Work with JSON data here
+
     // Access the data object
     let allQuestions = data.data;
 
@@ -13,39 +14,40 @@ function getQuestion(){
 
      // create p element for question
      let paraQuestion = document.createElement('p');
-     
-     
+          
      // Display question to UI
-     const yourQuestion = allQuestions.question
-     //question.appendChild(allQuestions.question)
-     //question.innerHTML = yourQuestion;
+     const yourQuestion = allQuestions.question;
      question.appendChild(paraQuestion);
      paraQuestion.innerHTML = yourQuestion;
-function addOptions() {
-  // convert options object into an array
-     let allOptions = Object.values(allQuestions.option);
 
-  // create array of list elements
-     let optionUI = document.querySelector(".options").childNodes;
-     let listOptions = [];
-     // loop through childNodes
-     for (let i = 0; i < optionUI.length; i++) {
-      let child = optionUI[i];
-      if (child.nodeType == 1) {
-        listOptions.push(child);
-      }
-     }
+     // Show Options
+    function addOptions() {
+      // convert options object into an array
+         let allOptions = Object.values(allQuestions.option);
 
-      // Match options to list elements
-       for(let j = 0; j < listOptions.length; j++) {
-        listOptions[j].textContent = allOptions[j];
-      }
-}
+      // create array of list elements
+         let optionUI = document.querySelector(".options").childNodes;
+         let listOptions = [];
+
+         // loop through childNodes
+         for (let i = 0; i < optionUI.length; i++) {
+          let child = optionUI[i];
+          if (child.nodeType == 1) {
+            listOptions.push(child);
+          }
+         }
+
+          // Match options to list elements
+           for(let j = 0; j < listOptions.length; j++) {
+            listOptions[j].textContent = allOptions[j];
+          }
+    }
      addOptions();
-     
+
      //console.log(this.question);
-    // console.log(data);
-    // console.log(question);
+     console.log(data);
+     console.log(allQuestions.answer);
+     //console.log(question);
     // console.log(typeof (allOptions[0]));
     // console.log(optionUI);
     // console.log(listOptions);
@@ -57,9 +59,13 @@ function addOptions() {
 }
 
 getQuestion();
-//getQuestion();
 
 
+// Get chosen answer
+var choice = document.querySelector('#answer');
+    function getChoice() { 
+      console.log(choice.value);
+    }
 
 
 
@@ -78,6 +84,8 @@ document.querySelector('button').addEventListener('click', function(){
     createdOptions[i].textContent = '';
   }
   getQuestion();
+  getChoice();
+  //clearAnswer();
   console.log('test is my name')
 })
 
