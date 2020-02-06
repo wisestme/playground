@@ -21,8 +21,8 @@ function getQuestion(){
      //question.innerHTML = yourQuestion;
      question.appendChild(paraQuestion);
      paraQuestion.innerHTML = yourQuestion;
-
-     // convert options object into an array
+function addOptions() {
+  // convert options object into an array
      let allOptions = Object.values(allQuestions.option);
 
   // create array of list elements
@@ -40,13 +40,15 @@ function getQuestion(){
        for(let j = 0; j < listOptions.length; j++) {
         listOptions[j].textContent = allOptions[j];
       }
+}
+     addOptions();
      
      //console.log(this.question);
-    console.log(data);
-    console.log(question);
-    console.log(typeof (allOptions[0]));
-    console.log(optionUI);
-    console.log(listOptions);
+    // console.log(data);
+    // console.log(question);
+    // console.log(typeof (allOptions[0]));
+    // console.log(optionUI);
+    // console.log(listOptions);
 
   })
   .catch(err => {
@@ -61,14 +63,20 @@ getQuestion();
 
 
 
-//console.log(createdPara)
+// 
 document.querySelector('button').addEventListener('click', function(){
-  var createdPara = document.querySelectorAll('#questionUI p')
+  // SELECT ELEMENTS
+  var createdPara = document.querySelectorAll('#questionUI p');
+  var createdOptions = document.querySelectorAll('.options li');
   //createdPara.style.display = 'none';
   for(var i = 0; i < createdPara.length; i++){
     createdPara[i].classList.add('hide');
   }
   
+  for(var i = 0; i < createdOptions.length; i++){
+    //createdOptions[i].classList.add('hide');
+    createdOptions[i].textContent = '';
+  }
   getQuestion();
   console.log('test is my name')
 })
