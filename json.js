@@ -46,7 +46,7 @@ function getQuestion(){
     console.log(question);
     console.log(typeof (allOptions[0]));
     console.log(optionUI);
-    console.log(listOptions[0]);
+    console.log(listOptions);
 
   })
   .catch(err => {
@@ -55,3 +55,16 @@ function getQuestion(){
 }
 
 getQuestion();
+//getQuestion();
+
+
+
+
+
+//console.log(createdPara)
+document.querySelector('button').addEventListener('click', function(){
+  var createdPara = document.querySelector('#questionUI p')
+  createdPara.style.display = 'none';
+  console.log('test is my name')
+})
+
