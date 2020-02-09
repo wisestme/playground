@@ -1,4 +1,8 @@
-function getQuestion(){
+// Get chosen answer
+
+
+let info = {
+getQuestion: function (){
   fetch('https://questions.aloc.ng/api/q?subject=chemistry')
   .then(response => {
     return response.json()
@@ -44,32 +48,32 @@ function getQuestion(){
     }
      addOptions();
 
+     function correctAnswer() {
+      let correctAnswer = allQuestions.answer
+     }
+
      //console.log(this.question);
+     console.log(this);
      console.log(data);
      console.log(allQuestions.answer);
-     //console.log(question);
-    // console.log(typeof (allOptions[0]));
-    // console.log(optionUI);
-    // console.log(listOptions);
-
+     
+    var choiceField = document.querySelector('#answer');
+    console.log(choiceField.value);
   })
   .catch(err => {
     // Do something for an error here
   })
 }
+}
 
-getQuestion();
+info.getQuestion();
 
 
-// Get chosen answer
-var choice = document.querySelector('#answer');
-    function getChoice() { 
-      console.log(choice.value);
-    }
 
 // Clear answer field
-  function clearAnswer() { 
-      choice.value = '';
+  function clearAnswer() {
+    var choiceField = document.querySelector('#answer');
+      choiceField.value = '';
     }
 
 // 
@@ -87,8 +91,7 @@ document.querySelector('button').addEventListener('click', function(){
     createdOptions[i].textContent = '';
   }
   getQuestion();
-  getChoice();
-  clearAnswer();
+  //clearAnswer();
   console.log('test is my name')
 })
 
