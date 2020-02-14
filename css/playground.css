@@ -30,16 +30,14 @@ body {
   opacity: 0.25;
 }
 
-ul {
+/*ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   
-}
+}*/
 
 li {
-  width: 900px;
-  height: 70px;
   background-color: #aa8821;
   margin: 2em;
   list-style: none;
@@ -72,4 +70,19 @@ a {
 a:hover {
   color: #1df;
   transition: color 200ms ease-in 200ms;
+}
+
+nav li ul {
+  height: 0;
+  width: 0;
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+  transition-delay: 50ms;
+  transform: scale(1, 0);
+  transform-origin: top center;
+}
+
+nav li:hover ul {
+  transform: scale(1, 1);
 }
