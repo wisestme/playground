@@ -63,3 +63,13 @@ li {
 #source-container {
   animation: 5s fadeIn 2s 2;
 }
+
+a {
+  color: #fd1;
+  transition: color 200ms ease-out 200ms;
+}
+
+a:hover {
+  color: #1df;
+  transition: color 200ms ease-in 200ms;
+}
