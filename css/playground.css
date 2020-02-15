@@ -69,7 +69,7 @@ a {
 
 a:hover {
   color: #1df;
-  transition: color 200ms ease-in 200ms;
+  transition: color 100ms ease-in 200ms;
 }
 
 nav li ul {
@@ -85,4 +85,28 @@ nav li ul {
 
 nav li:hover ul {
   transform: scale(1, 1);
+}
+
+.headline {
+  color: #ff0000;
+  border: 1px solid #00ff00;
+  border-radius: 0;
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+  width: 50px;
+  padding: 100px;
+}
+
+div:hover {
+  color: #000000;
+  border: 5px dashed #000000;
+  border-radius: 50%;
+  transform: scale(2) rotate(-10deg);
+  opacity: 0.5;
+  box-shadow: -3px -3px rgba(255, 0, 0, 0.5);
+  width: 100px;
+  padding: 20px;
+  transition-property: all;
+  transition-duration: 1s;
 }
