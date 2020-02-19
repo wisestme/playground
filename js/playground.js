@@ -57,3 +57,23 @@ let funcName = ()  => console.log('me');
 
 
 funcName();
+
+
+/******************************************************************
+*************CSS ANIMATIONS***********************/
+// let widget = document.querySelector('a');
+// widget.addEventListener('transitionend', function() {
+//   console.log('beautiful animation');
+//   alert('beautiful animation');
+// });
+
+
+function printAmount (amount) {
+  console.log(amount.toFixed(3));
+  amount += 2;
+  console.log(amount.toFixed(3));
+
+}
+
+
+printAmount(99.99);

@@ -69,7 +69,8 @@ a {
 
 a:hover {
   color: #1df;
-  transition: color 100ms ease-in 200ms;
+  transition: color 1000ms 200ms;
+  transition-timing-function: steps(5, start);
 }
 
 nav li ul {
@@ -81,10 +82,14 @@ nav li ul {
   transition-delay: 50ms;
   transform: scale(1, 0);
   transform-origin: top center;
+  opacity: 0;
 }
 
 nav li:hover ul {
+  opacity: 1;
   transform: scale(1, 1);
+  transition-property: transform, opacity;
+  transition-duration: 200ms;
 }
 
 .headline {
@@ -108,5 +113,20 @@ div:hover {
   width: 100px;
   padding: 20px;
   transition-property: all;
+  transition-duration: 1s;
+}
+
+input:valid {
+  border: 3px solid #0f0;
+  transition-duration: 1s;
+}
+
+input:invalid {
+  border: 3px solid #f00;
+  transition-duration: 1s;
+}
+
+input:focus {
+  border: 3px solid #ff0;
   transition-duration: 1s;
 }
