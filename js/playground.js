@@ -83,6 +83,7 @@ printAmount(amount);
 amount = formatAmount();
  console.log(amount);
 
+// FUNCTION SCOPE
  function one () {
   let a = 2;
   console.log(a);
@@ -95,3 +96,15 @@ amount = formatAmount();
 
  one();
  two();
+
+// NESTED FUNCTION
+function outer () {
+  let a = 5;
+
+  function inner () {
+    let b = 4;
+    console.log(a + b);
+  }
+inner();
+}
+outer();
