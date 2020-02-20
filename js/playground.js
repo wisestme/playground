@@ -67,13 +67,31 @@ funcName();
 //   alert('beautiful animation');
 // });
 
-
-function printAmount (amount) {
-  console.log(amount.toFixed(3));
-  amount += 2;
-  console.log(amount.toFixed(3));
-
+let amount = 99.99;
+function printAmount (amt) {
+  console.log(amt.toFixed(3));
+  amt += 2;
+  console.log(amt.toFixed(3));
+  return amt;
 }
 
+function formatAmount () {
+  return '$' + amount;
+}
+printAmount(amount);
 
-printAmount(99.99);
+amount = formatAmount();
+ console.log(amount);
+
+ function one () {
+  let a = 2;
+  console.log(a);
+ }
+
+ function two () {
+  let a = 3;
+  console.log(a);
+ }
+
+ one();
+ two();
