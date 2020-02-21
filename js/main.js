@@ -11,11 +11,15 @@ $('[href="https://yahoo.com"]').css('color', '#1fa');
 /*****************************************************
 EVENTS
 */
-$('#btn1').dblclick(function(){
-	alert('Button Clicked!');
+$('#btn1').on('mousedown', (function(){
+	//alert('Button Clicked!');
 	$('#container p:last-child').toggle();
-});
+}));
 
+$('#btn1').on('mouseup', (function(){
+	//alert('Button Clicked!');
+	$('#container p:last-child').toggle();
+}));
 // $('#btn2').click(function(){
 // 	$('#container p:last-child').hide();
 // })
