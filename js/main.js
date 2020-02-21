@@ -11,7 +11,7 @@ $('[href="https://yahoo.com"]').css('color', '#1fa');
 /*****************************************************
 EVENTS
 */
-$('#btn1').click(function(){
+$('#btn1').dblclick(function(){
 	alert('Button Clicked!');
 	$('#container p:last-child').toggle();
 });
