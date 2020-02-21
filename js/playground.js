@@ -108,3 +108,53 @@ function outer () {
 inner();
 }
 outer();
+
+/****************************************
+PRACTICE*/
+let balance = 500;
+let price;
+
+// function buyPhone (phonePrice, accessoryPrice) {
+//   if(balance > phonePrice) {
+//     balance = balance - phonePrice;
+//   } else {
+//     console.log('please top up your wallet');
+//   }
+
+//   if(balance > accessoryPrice) {
+//     balance = balance - accessoryPrice;
+//   } else {
+//     console.log('please top up your wallet');
+//   }
+  
+//   console.log(balance);
+//   return balance
+// }
+
+
+
+// balance = buyPhone(100, 50);
+// console.log(balance);
+
+function buyProduct (phonePrice, accessoryPrice) {
+  let purchases = [];
+  while(balance > phonePrice) {
+    let initialBalance = balance;
+    function buyPhone () {
+      balance = balance - phonePrice;
+      if(balance > accessoryPrice) {
+        balance = balance - accessoryPrice;
+      }
+
+      purchase = initialBalance - balance;
+      purchases.push(purchase);
+      return purchases;
+    }
+    let allPurchase = buyPhone();
+    console.log(allPurchase);
+  }
+}
+
+buyProduct(100, 30);
+buyProduct(100, 50);
+

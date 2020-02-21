@@ -13,4 +13,9 @@ EVENTS
 */
 $('#btn1').click(function(){
 	alert('Button Clicked!');
+	$('#container p:last-child').toggle();
 });
+
+// $('#btn2').click(function(){
+// 	$('#container p:last-child').hide();
+// })
