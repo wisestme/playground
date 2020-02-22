@@ -39,7 +39,7 @@ body {
 
 li {
   background-color: #aa8821;
-  margin: 2em;
+  margin: 0.5em;
   list-style: none;
 }
 
@@ -92,18 +92,17 @@ nav li:hover ul {
   transition-duration: 200ms;
 }
 
-.headline {
+/*.headline {
   color: #ff0000;
   border: 1px solid #00ff00;
   border-radius: 0;
   transform: scale(1) rotate(0deg);
   opacity: 1;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
-  width: 50px;
   padding: 100px;
-}
+}*/
 
-div:hover {
+/*div:hover {
   color: #000000;
   border: 5px dashed #000000;
   border-radius: 50%;
@@ -114,7 +113,7 @@ div:hover {
   padding: 20px;
   transition-property: all;
   transition-duration: 1s;
-}
+}*/
 
 input:valid {
   border: 3px solid #0f0;
@@ -129,4 +128,25 @@ input:invalid {
 input:focus {
   border: 3px solid #ff0;
   transition-duration: 1s;
+}
+
+div {
+   width: 300px;
+   height: 500px;
+   border: 2px solid #3ab;
+   transition: width 10s steps(10, start);
+}
+
+/*div:hover {
+  width: 200px;
+}
+*/
+#psy {
+  /*width: 49px; height: 100px;*/
+  background-image: url(../img/lady_gent.gif);
+  background-position: 0 0;
+  transition: background-position 8s steps(22, end);
+}
+#psy:hover{
+  background-position: -1229px 0;
 }
