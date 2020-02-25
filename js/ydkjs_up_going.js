@@ -1,10 +1,5 @@
 let numberOfCustomers = 10;
-while (numberOfCustomers > 0) {
+do {
+	console.log('how may i help you');
 	numberOfCustomers -= 1;
-	while (numberOfCustomers > 0) {
-		console.log('please how may I help you');
-		numberOfCustomers -= 1;
-	}
-	
-
-}
+} while(numberOfCustomers > 0);
