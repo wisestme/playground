@@ -1,5 +1,13 @@
-let amount = 10.99;
-function printAmount() {
-	console.log(amount.toFixed(1))
+
+function formatAmount(amt) {
+	//console.log(amt)
+	return '$' + amt.toFixed(2);
 }
-printAmount();
+
+result = formatAmount(99.99678);
+
+console.log(result);
+
+
+
+
