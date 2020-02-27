@@ -1,10 +1,10 @@
 
-function formatAmount(amt) {
+let result = (function (amt) {
 	//console.log(amt)
 	return '$' + amt.toFixed(2);
-}
+})(99.999);
 
-result = formatAmount(99.99678);
+
 
 console.log(result);
 
