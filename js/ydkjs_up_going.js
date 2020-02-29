@@ -1,13 +1,13 @@
 
-let result = (function (amt) {
-	//console.log(amt)
-	return '$' + amt.toFixed(2);
-})(99.999);
+const TAX_RATE = 0.08;
 
+function calculateFinalPurchaseAmount (amt) {
+	amt = amt + (amt * TAX_RATE);
+	return amt
+}
 
-
-console.log(result);
-
+let cost = calculateFinalPurchaseAmount(200);
+console.log(cost);
 
 
 
