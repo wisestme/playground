@@ -1,11 +1,20 @@
+let phonePrice = [80, 200, 220, 90, 100];
+let accessoryPrice = [50, 120, 125, 55, 60];
+let wallet = 500;
+let balance = [];
+let purchase = [];
 
-function one (a) {
-	console.log(a);
+for(let i = 0; i < phonePrice.length; i++) {
+	let total = phonePrice[i] + accessoryPrice[i];
+	if(phonePrice[i] < wallet) {
+		wallet = wallet - phonePrice[i];
+		if(accessoryPrice[i] < wallet) {
+			wallet = wallet - accessoryPrice[i];
+		}
+		purchase.push(total);
+		balance.push(wallet);
+	}
+	//console.log(balance);
 }
-
-function two (a) {
-	console.log(a);
-}
-
-one(4);
-two(6);
+console.log(balance);
+console.log(purchase);
