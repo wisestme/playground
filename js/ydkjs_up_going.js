@@ -1,13 +1,11 @@
 
-const TAX_RATE = 0.08;
-
-function calculateFinalPurchaseAmount (amt) {
-	amt = amt + (amt * TAX_RATE);
-	return amt
+function one (a) {
+	console.log(a);
 }
 
-let cost = calculateFinalPurchaseAmount(200);
-console.log(cost);
+function two (a) {
+	console.log(a);
+}
 
-
-
+one(4);
+two(6);
