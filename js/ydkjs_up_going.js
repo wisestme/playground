@@ -3,7 +3,7 @@ let accessoryPrice = [50, 120, 125, 55, 60];
 let wallet = 500;
 let balance = [];
 let purchase = [];
-//const TAX_RATE = 0.08;
+const TAX_RATE = 0.08;
 
 for(let i = 0; i < phonePrice.length; i++) {
 	let total = phonePrice[i] + accessoryPrice[i];
@@ -31,7 +31,7 @@ function calcTotalPurchase () {
 let purchaseAmount = calcTotalPurchase();
 console.log(purchaseAmount);
 
-//let paid = purchaseAmount + (purchaseAmount * TAX_RATE);
+let paid = purchaseAmount + (purchaseAmount * TAX_RATE);
 
 console.log(paid);
 console.log(balance);
