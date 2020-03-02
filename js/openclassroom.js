@@ -10,3 +10,5 @@ let episode = {
 	duration: 120,
 	hasBeenWatched: false
 };
+
+console.log(episode.title);
