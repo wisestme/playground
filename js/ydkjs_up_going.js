@@ -33,6 +33,6 @@ console.log(purchaseAmount);
 
 let paid = purchaseAmount + (purchaseAmount * TAX_RATE);
 
-console.log(paid);
+console.log("$" + paid);
 console.log(balance);
 console.log(purchase);
