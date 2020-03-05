@@ -1,3 +1,6 @@
-let guests = ['Vincent Gloria', 'Chijioke Nwagwu', 'Ugwu Chizoba'];
+let firstGuest = 'Vincent Gloria';
+let secondGuest = 'Chijioke Nwagwu';
 
-console.log(guests[1]);
+let guests = [firstGuest, secondGuest];
+
+console.log(guests);
