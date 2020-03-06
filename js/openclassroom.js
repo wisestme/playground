@@ -1,6 +1,15 @@
-let firstGuest = {name: 'Vincent Gloria', vip: true};
-let secondGuest = {name: 'Chijioke Nwagwu', vip: true};
+let numberOfGuests = 5;
+let ticketsRemaining = false;
+let artistName = 'Phil Wickham';
 
-let guests = [firstGuest, secondGuest];
+let artistProfile = {
+	numberOfGuests: numberOfGuests,
+	ticketsRemaining: ticketsRemaining,
+	artistName: artistName
+};
 
-console.log(guests);
+let artistArray = [artistProfile];
+
+artistProfile.ticketsRemaining = true;
+console.log(artistProfile);
+console.log(artistArray);
