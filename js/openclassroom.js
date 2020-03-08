@@ -1,10 +1,12 @@
-let seatsLeft = 10;
-let unboardedPassengers = 8;
-let boardedPassengenr = 0;
+const user = {
+	firstName: 'Gloria',
+	lastName: 'Vincent',
+	age: 26
+};
 
-while(seatsLeft > 0 && unboardedPassengers > 0) {
-	boardedPassengenr++;
-	unboardedPassengers--;
-	seatsLeft--;
+try {
+	console.log(use);
+} catch(error) {
+	alert('an error occured');
+	console.log(error);
 }
-console.log(boardedPassengenr +' passengers successfully boarded')
