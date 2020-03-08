@@ -6,11 +6,24 @@
 	<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-	<form action="">
+	<main>
 		<div class="contact-title">
 			<h1>Say Hello</h1>
 			<h2>We are always happy to serve you</h2>
 		</div>
-	</form>
+
+		<section class="contact-form">
+			<form id="contact-form" method="post" action="php/contact.php">
+				<input name="name" type="text" class="form-control" placeholder="Your Name" required>
+				<br>
+
+				<input name="email" type="email" class="form-control" placeholder="Your Email" required>
+				<br>
+				<textarea name="message" class="form-control" placeholder="message" id="" cols="30" rows="4" required></textarea>
+				<br>
+				<input type="submit" class="form-control submit" value="send">
+			</form>
+		</section>
+	</main>
 </body>
 </html>
