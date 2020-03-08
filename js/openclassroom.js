@@ -1,15 +1,10 @@
-let numberOfGuests = 5;
-let ticketsRemaining = false;
-let artistName = 'Phil Wickham';
+let seatsLeft = 10;
+let unboardedPassengers = 8;
+let boardedPassengenr = 0;
 
-let artistProfile = {
-	numberOfGuests: numberOfGuests,
-	ticketsRemaining: ticketsRemaining,
-	artistName: artistName
-};
-
-let artistArray = [artistProfile];
-
-artistProfile.ticketsRemaining = true;
-console.log(artistProfile);
-console.log(artistArray);
+while(seatsLeft > 0 && unboardedPassengers > 0) {
+	boardedPassengenr++;
+	unboardedPassengers--;
+	seatsLeft--;
+}
+console.log(boardedPassengenr +' passengers successfully boarded')
