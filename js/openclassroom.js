@@ -1,12 +1,7 @@
-const user = {
-	firstName: 'Gloria',
-	lastName: 'Vincent',
-	age: 26
-};
-
-try {
-	console.log(use);
-} catch(error) {
-	alert('an error occured');
-	console.log(error);
+const add = (firstNumber, secondNumber) => {
+	const result = firstNumber + secondNumber;
+	return result;
 }
+
+let firstResult = add(8, 4);
+console.log(firstResult);
