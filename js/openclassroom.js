@@ -1,7 +1,12 @@
-const add = (firstNumber, secondNumber) => {
-	const result = firstNumber + secondNumber;
-	return result;
+const calculateAverageRating = (ratingArray) => {
+let ratingSum = 0;
+let averageRating;
+for(let rating of ratingArray) {
+  ratingSum += rating;
+  averageRating = ratingSum / ratingArray.length;
+}
+  return averageRating;
 }
 
-let firstResult = add(8, 4);
-console.log(firstResult);
+let sumOfRating = calculateAverageRating([4, 5, 3, 4, 3]);
+console.log(sumOfRating);
