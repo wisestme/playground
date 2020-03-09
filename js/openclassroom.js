@@ -10,9 +10,14 @@ class BankAccount {
 		this.balance += amount;
 		this.showBalance();
 	}
+
 	withdraw(amount) {
-		this.balance -= amount;
-		this.showBalance();
+		if(this.balance > amount) {
+			this.balance -= amount;
+			this.showBalance();
+		} else {
+			console.log('not enough balance');
+		}
 	}
 }
 
@@ -21,4 +26,4 @@ const newAccount = new BankAccount('Vincent Gloria', 500);
 //console.log(newAccount.balance);
 newAccount.showBalance();
 newAccount.deposit(80);
-newAccount.withdraw(30);
+newAccount.withdraw(800);
