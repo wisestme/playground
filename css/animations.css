@@ -12,3 +12,21 @@ body {
 img {
 	transform: rotateZ(-90deg) translateY(200px) scale(0.5);
 }
+
+.circle {
+	border-radius: 50px;
+	padding: 50px 0;
+	width: 100px;
+	line-height: 0;
+	margin: 60px auto;
+	background: #f122cc;
+	cursor: pointer;
+	color: #fff;
+	transition: 1s;
+	transform: rotate(270deg);
+}
+
+.circle:hover {
+	background: salmon;
+	transform: rotate(360deg);
+}
