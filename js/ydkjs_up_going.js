@@ -1,6 +1,6 @@
 let phonePrice = [80, 200, 220, 90, 100];
 let accessoryPrice = [50, 120, 125, 55, 60];
-let wallet = 500;
+let wallet = prompt('How much do you have in your wallet?');
 let balance = [];
 let purchase = [];
 const TAX_RATE = 0.08;
