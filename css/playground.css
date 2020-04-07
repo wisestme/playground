@@ -1,6 +1,10 @@
 body {
   font-family: 'gothamc'; 
 }
+.test::after {
+  background: #ff0000;
+  content: '\f105  '; 
+}
 [data-role="drag-drop-target"] {
   float: left;
   width: 60%;
