@@ -1,0 +1,151 @@
+:root {
+  --padding-h: 60px;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: roboto;
+  text-align: center;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 20px;
+  padding-left: var(--padding-h);
+  padding-right: var(--padding-h);
+}
+
+.gallery {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery__img {
+  scroll-snap-align: start;
+  /* min-height: 100vh; */
+  object-fit: contain;
+  margin-bottom: 2em;
+}
+
+.lil-nav {
+  scroll-snap-type: x mandatory;
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding-top: 20px;
+
+  a {
+    min-height: 200px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 10px;
+  }
+}
+
+.lil-nav__img {
+  margin: 0;
+  filter: saturate(0);
+  scroll-snap-align: start;
+  transition: 0.3s ease all;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: saturate(1);
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+.modal {
+	position: fixed;
+	bottom: 0;
+	right: -350px;
+	height: 20vh;
+	width: 250px;
+	background: var(--pry-back);
+	border-radius: 20px 0 0 0;
+	padding: 2em 1em;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+	opacity: 0.9;
+	/*display: none;*/
+	transition: right 0.5s;
+  background: #007;
+  color: #fff;
+}
+
+.modal a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul svg {
+  margin-right: 10px;
+}
+
+.close svg {
+  fill: #fff;
+  position: relative;
+  right: -225px;
+  top: -10px;
+}
+
+.phone_icon {
+	position: fixed;
+	bottom: 2em;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0 0 13px 0 rgba(151,151,151,0.5);
+	background: var(--pry-back);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 1em;
+	z-index: 1;
+	-webkit-animation-delay: 10s;
+	-o-animation-delay: 10s;
+	animation-delay: 10s;
+	animation-iteration-count: 5.5;
+	transition: 1s transform;
+}
+
+.phone_icon:hover {
+	animation: paused;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.8em;
+}
