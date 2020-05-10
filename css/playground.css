@@ -136,7 +136,6 @@ input:focus {
 
 div {
    width: 300px;
-   height: 500px;
    border: 2px solid #3ab;
    transition: width 10s steps(10, start);
 }
@@ -153,4 +152,28 @@ div {
 }
 #psy:hover{
   background-position: -1229px 0;
+}
+
+/*****************Parallax**************/
+p {
+  width: 100%;
+  margin: auto;
+  font-size: 50px;
+  transform: scale(.5);
+  font-family: courier new;
+  font-weight: bold;
+}
+
+.parallax {
+  background-image: url("../img/new/back.jpeg");
+  background-attachment: fixed;
+  transform: scale(1.25);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+body {
+  height: 100%;
+  overflow: scroll;
 }

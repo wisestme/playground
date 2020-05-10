@@ -125,7 +125,8 @@ ul svg {
 	height: 50px;
 	border-radius: 50%;
 	box-shadow: 0 0 13px 0 rgba(151,151,151,0.5);
-	background: var(--pry-back);
+  background: #007;
+  color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
