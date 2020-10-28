@@ -1,6 +1,10 @@
 body {
   font-family: 'gothamc'; 
 }
+
+nav {
+  background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+}
 .test::after {
   background: #ff0000;
   content: '\f105  '; 
