@@ -92,9 +92,34 @@
 			result = !(t && f);
 			document.write(result);
 			document.write(linebreak);
-			
 
+			var aProperty;
+			document.write("Navigator object properties");
+			for (aProperty in navigator) {
+				document.write(`${aProperty}: ${navigator[aProperty]}`);
+				document.write("<br />");
+			}
+
+			document.write("<br />");
+
+			var x = 1;
+			document.write("Entering loop");
+
+			while (x < 20) {
+				x++;
+				if (x == 5) {
+					continue;
+				}
+				
+				document.write(x + "<br />");
+			}
+			document.write("Exiting the loop");
+			
+			
+			 
 		//-->
 	</script>
+
+	
 </body>
 </html>
