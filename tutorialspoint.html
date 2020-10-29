@@ -11,6 +11,8 @@
 			var a = 33;
 			var b = 10;
 			var c = "Test";
+			var t = true;
+			var f = false;
 			var linebreak= "<br />";
 
 			document.write("a + b = ");
@@ -70,7 +72,28 @@
 			result = a <= b;
 			document.write(result);
 			document.write(linebreak);
+
+
+			document.write(linebreak);
+			document.write("Logical")
+			document.write(linebreak);
+
+			document.write("t && f => ");
+			result = (t && f);
+			document.write(result);
+			document.write(linebreak);
+
+			document.write("t || f => ");
+			result = (t || f);
+			document.write(result);
+			document.write(linebreak);
+
+			document.write("!(t && f) => ");
+			result = !(t && f);
+			document.write(result);
+			document.write(linebreak);
 			
+
 		//-->
 	</script>
 </body>
