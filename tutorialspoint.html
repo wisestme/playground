@@ -115,8 +115,8 @@
 			}
 			document.write("Exiting the loop");
 			
-			function sayHello() {
-				alert("How are you doing mr Wisest");
+			function sayHello(name, age) {
+				alert(`How are you doing mr ${name}? Please how are you ${age} years old?`);
 			}
 
 			 
@@ -125,7 +125,7 @@
 
 	<p>Click the following button to call the function</p>
 	<form action="">
-		<input type="button" onclick="sayHello()" value="Greetings">
+		<input type="button" onclick="sayHello('Wisest', 33)" value="Greetings">
 	</form>
 </body>
 </html>
