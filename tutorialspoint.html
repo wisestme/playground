@@ -4,6 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+
+	<script>
+		function redirect() {
+			window.location = 'https://tutorialspoint.com';
+		}
+
+		document.write("Taking you to the page in 10 seconds");
+		setTimeout('redirect()', 10000)
+	</script>
 </head>
 <body>
 	<script>
@@ -119,6 +128,18 @@
 				alert(`How are you doing mr ${name}? Please how are you ${age} years old?`);
 			}
 
+			function concatenateName(firstName, lastName) {
+				var fullName;
+				fullName = firstName + lastName;
+				return fullName;
+			}
+
+			function secondFunction() {
+				var resultant;
+				resultant = concatenateName('Chijioke', 'Nwagwu');
+				document.write(resultant);
+			}
+
 			 
 		//-->
 	</script>
@@ -126,6 +147,9 @@
 	<p>Click the following button to call the function</p>
 	<form action="">
 		<input type="button" onclick="sayHello('Wisest', 33)" value="Greetings">
+
+		<input type="button" onclick="secondFunction()" value="show name">
+		this is my keypadhf
 	</form>
 </body>
 </html>
