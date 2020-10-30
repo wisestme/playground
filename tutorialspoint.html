@@ -6,17 +6,27 @@
 	<title>Document</title>
 
 	<script>
-		function redirect() {
-			window.location = 'https://tutorialspoint.com';
+		function getConfirmation() {
+			var returnValue = confirm("Do you want to continue?");
+			if(returnValue == true) {
+				document.write ("User wants to continue");
+				return true;
+			} else {
+				document.write("User does not want to continue");
+				return false;
+			}
 		}
 
-		document.write("Taking you to the page in 10 seconds");
-		setTimeout('redirect()', 10000)
+		function getValue() {
+			var retVal = prompt("Enter your name: ", "Your name here");
+			document.write("You have entered: " + retVal);
+		}
 	</script>
 </head>
 <body>
 	<script>
 		<!--
+			
 			var a = 33;
 			var b = 10;
 			var c = "Test";
@@ -143,13 +153,14 @@
 			 
 		//-->
 	</script>
-
+	<input type="button" onclick="getConfirmation()" value="Please confirm">
 	<p>Click the following button to call the function</p>
 	<form action="">
 		<input type="button" onclick="sayHello('Wisest', 33)" value="Greetings">
 
 		<input type="button" onclick="secondFunction()" value="show name">
-		this is my keypadhf
+		
+		<input type="button" onclick="getValue()" value="request info">
 	</form>
 </body>
 </html>
