@@ -3,7 +3,8 @@ const getTodos = (theCallback) => {
 
   request.addEventListener('readystatechange', () => {
     if(request.readyState ===  4 && request.status === 200) {
-      theCallback(undefined, request.responseText);
+      const data = JSON.parse(request.responseText);
+      theCallback(undefined, data);
     } else if(request.readyState === 4) {
       theCallback('could not fetch data', undefined);
     }
