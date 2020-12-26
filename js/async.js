@@ -3,9 +3,9 @@ const getTodos = (theCallback) => {
 
   request.addEventListener('readystatechange', () => {
     if(request.readyState ===  4 && request.status === 200) {
-      theCallback();
+      theCallback(undefined, request.responseText);
     } else if(request.readyState === 4) {
-      theCallback();
+      theCallback('could not fetch data', undefined);
     }
   });
 
