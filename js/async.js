@@ -13,7 +13,12 @@ const getTodos = (theCallback) => {
   request.send();
 }
 
-getTodos(() => {
+getTodos((err, data) => {
   console.log('the call back is being fired');
+  if(err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
 });
 
