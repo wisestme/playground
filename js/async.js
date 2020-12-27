@@ -1,4 +1,4 @@
-const getTodos = (theCallback) => {
+const getTodos = (resource, theCallback) => {
   const request = new XMLHttpRequest();
 
   request.addEventListener('readystatechange', () => {
@@ -10,20 +10,22 @@ const getTodos = (theCallback) => {
     }
   });
 
-  request.open('GET', 'js/todos.json');
+  request.open('GET', resource);
   request.send();
 }
 
 console.log(1);
 console.log(2);
 
-getTodos((err, data) => {
+getTodos('js/luigi.json', (err, data) => {
   console.log('the call back is being fired');
-  if(err) {
-    console.log(err);
-  } else {
+  console.log(data);
+  getTodos('js/mario.json', (err, data) => {
     console.log(data);
-  }
+    getTodos('js/shaun.json', (err, data) => {
+      console.log(data);
+    });
+  });
 });
 
 console.log(3);
