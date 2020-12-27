@@ -10,7 +10,7 @@ const getTodos = (theCallback) => {
     }
   });
 
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
+  request.open('GET', 'js/todos.json');
   request.send();
 }
 
