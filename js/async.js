@@ -14,19 +14,33 @@ const getTodos = (resource, theCallback) => {
   request.send();
 }
 
-console.log(1);
-console.log(2);
+// promise example
+const getSomething = () => {
+  return new Promise((resolve, reject) => {
+    // fetch something
+    //resolve('some data');
+    reject('some error')
+  })
+}
 
-getTodos('js/luigi.json', (err, data) => {
-  console.log('the call back is being fired');
+getSomething().then((data) => {
   console.log(data);
-  getTodos('js/mario.json', (err, data) => {
-    console.log(data);
-    getTodos('js/shaun.json', (err, data) => {
-      console.log(data);
-    });
-  });
+}, (err) => {
+  console.log(err);
 });
+// console.log(1);
+// console.log(2);
 
-console.log(3);
-console.log(4);
+// getTodos('js/luigi.json', (err, data) => {
+//   console.log('the call back is being fired');
+//   console.log(data);
+//   getTodos('js/mario.json', (err, data) => {
+//     console.log(data);
+//     getTodos('js/shaun.json', (err, data) => {
+//       console.log(data);
+//     });
+//   });
+// });
+
+// console.log(3);
+// console.log(4);
