@@ -25,7 +25,7 @@ const getSomething = () => {
 
 getSomething().then((data) => {
   console.log(data);
-}, (err) => {
+}).catch(err => {
   console.log(err);
 });
 // console.log(1);
