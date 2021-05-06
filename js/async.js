@@ -7,7 +7,8 @@ console.log("Line three");
 console.log("Line four");
 console.log("Line five");
 
-// Create request object
+const getToDos = () => {
+  // Create request object
 const request = new XMLHttpRequest(); //XML old data format
 
 request.addEventListener("readystatechange", () => {
@@ -23,3 +24,5 @@ request.addEventListener("readystatechange", () => {
 })
 request.open("GET", "https://jsonplaceholder.typicode.com/todos/");
 request.send();
+}
+
