@@ -17,6 +17,9 @@ const getToDos = (callback) => {
   request.send();
 }
 
+console.log(1);
+console.log(2);
+
 getToDos((err, data) => {
   console.log("callback fired");
   if(err)
@@ -28,4 +31,7 @@ getToDos((err, data) => {
     console.log(data);
   }
 });
+
+console.log(3);
+console.log(4);
 
