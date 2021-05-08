@@ -41,3 +41,12 @@ getToDos('js/todos.json').then(data => {
 console.log(3);
 console.log(4);
 
+// Fetch
+fetch('js/luigi.json').then(response => {
+  console.log('Resolved', response);
+  return response.json();
+}).then(data => {
+  console.log(data);
+}).catch(err => {
+  console.log('Rejescted', err);
+})
