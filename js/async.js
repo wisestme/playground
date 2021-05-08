@@ -53,7 +53,11 @@ fetch('js/luigi.json').then(response => {
 
 // Async & Await
 const getToDos2 = async () => {
-  const response = await fetch('js/todos.json');
+  const response = await fetch('js/todoss.json');
+  if(response.status !== 200)
+  {
+    throw new Error('Could not fetch the data');
+  }
   const data = await response.json();
 
   return data;
