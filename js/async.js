@@ -50,3 +50,15 @@ fetch('js/luigi.json').then(response => {
 }).catch(err => {
   console.log('Rejescted', err);
 })
+
+// Async & Await
+const getToDos2 = async () => {
+  const response = await fetch('js/todos.json');
+  const data = await response.json();
+
+  return data;
+};
+getToDos2()
+.then(data => console.log('Resolved', data))
+.catch(err => console.log('Rejected', err.message));
+
