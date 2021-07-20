@@ -8,9 +8,15 @@
 	<script type="text/javascript">
 		var myData = {
 			name: "Chijioke",
-			weather: "cloudy"
+			weather: "cloudy",
+			printMessage: function ()
+			{
+				document.writeln("My name is " + this.name + " and the weather is " + this.weather);
+			}
 		}
-		document.writeln("My name is " + myData.name + " and the weather is " + myData.weather);
+
+		myData.printMessage();
+		
 		var myFruit = "Banana"
 		function myFunc(name, weather)
 		{
