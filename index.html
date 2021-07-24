@@ -17,7 +17,7 @@
 
 		myData.printMessage();
 		
-		const avonproduct = {
+		const avonproducts = {
 			name: "Little Black Dress",
 			variant: "Midnight Black",
 			category: "EDP",
@@ -25,12 +25,16 @@
 			productDetails: function() {
 				this.name = "Eve Duet"
 				var productType = "variant"
-				avonproduct[productType] = "Contrast"
+				avonproducts[productType] = "Contrast"
 				document.writeln(this.name + " " +this.variant + " " + this.category + " costs " + this.price)
-				
 			}
-		}
-		avonproduct.productDetails();
+			
+		};
+		for(var anItem in avonproducts)
+				{
+					document.writeln(anItem + ": " + avonproducts[anItem] + "\n sss");
+				}
+		avonproducts.productDetails();
 
 		var myFruit = "Banana"
 		function myFunc(name, weather)
