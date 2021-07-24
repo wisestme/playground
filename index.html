@@ -23,7 +23,11 @@
 			category: "EDP",
 			price: 300,
 			productDetails: function() {
+				this.name = "Eve Duet"
+				var productType = "variant"
+				avonproduct[productType] = "Contrast"
 				document.writeln(this.name + " " +this.variant + " " + this.category + " costs " + this.price)
+				
 			}
 		}
 		avonproduct.productDetails();
