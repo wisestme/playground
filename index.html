@@ -20,10 +20,13 @@
 		const avonproduct = {
 			name: "Little Black Dress",
 			variant: "Midnight Black",
-			category: "EDP"
-			
+			category: "EDP",
+			price: 300,
+			productDetails: function() {
+				document.writeln(this.name + " " +this.variant + " " + this.category + " costs " + this.price)
 			}
 		}
+		avonproduct.productDetails();
 
 		var myFruit = "Banana"
 		function myFunc(name, weather)
