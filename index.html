@@ -11,13 +11,14 @@
 			weather: "cloudy",
 			printMessage: function ()
 			{
-				document.writeln("My name is " + this.name + " and the weather is " + this.weather);
+				document.writeln("My name is " + this.name + " and the weather is " + this.weather + "\n");
 			}
 		}
 
 		myData.printMessage();
 		
-		const avonproducts = {
+		const avonProducts = {
+			
 			name: "Little Black Dress",
 			variant: "Midnight Black",
 			category: "EDP",
@@ -25,16 +26,29 @@
 			productDetails: function() {
 				this.name = "Eve Duet"
 				var productType = "variant"
-				avonproducts[productType] = "Contrast"
-				document.writeln(this.name + " " +this.variant + " " + this.category + " costs " + this.price)
+				avonProducts[productType] = "Contrast"
+				document.writeln(this.name + " " +this.variant + " " + this.category + " costs " + this.price + "\n")
 			}
 			
 		};
-		for(var anItem in avonproducts)
+		for(let anItem in avonProducts)
 				{
-					document.writeln(anItem + ": " + avonproducts[anItem] + "\n sss");
+					if(anItem === "name")
+					{
+						document.writeln(avonProducts.anItem + " no error thrown but undefined");
+					}
 				}
-		avonproducts.productDetails();
+		avonProducts.productDetails();
+		avonProducts.availability = true;
+
+		avonProducts.toggleAvailability = function () {
+			if(avonProducts.availability == true)
+			{
+				avonProducts.availability = false;
+				document.writeln(avonProducts.name + " is no longer available")
+			}
+		}
+		avonProducts.toggleAvailability();
 
 		var myFruit = "Banana"
 		function myFunc(name, weather)
