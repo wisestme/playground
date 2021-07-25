@@ -38,6 +38,8 @@
 						document.writeln(avonProducts.anItem + " no error thrown but undefined");
 					}
 				}
+		delete avonProducts.productDetails;
+
 		avonProducts.productDetails();
 		avonProducts.availability = true;
 
@@ -49,7 +51,6 @@
 			}
 		}
 		avonProducts.toggleAvailability();
-
 		var myFruit = "Banana"
 		function myFunc(name, weather)
 		{
