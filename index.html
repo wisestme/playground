@@ -7,6 +7,15 @@
 <body>
 	<script type="text/javascript">
 		var myProductArray = ["Chijioke", 8, true];
+		document.writeln("name:" + myProductArray[1]);
+		myProductArray[2] = "Gloria";
+		for(var i = 0; i < myProductArray.length; i++)
+		{
+			document.writeln(myProductArray[i]);
+			var anItem = myProductArray[i];
+			document.writeln(anItem);
+		}
+		document.writeln(myProductArray[2]);
 		var myData = {
 			name: "Chijioke",
 			weather: "cloudy",
