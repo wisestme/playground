@@ -38,7 +38,6 @@
 						document.writeln(avonProducts.anItem + " no error thrown but undefined");
 					}
 				}
-		delete avonProducts.productDetails;
 
 		avonProducts.productDetails();
 		avonProducts.availability = true;
@@ -47,9 +46,13 @@
 			if(avonProducts.availability == true)
 			{
 				avonProducts.availability = false;
-				document.writeln(avonProducts.name + " is no longer available")
+				document.writeln(avonProducts.name + " is no longer available");
 			}
 		}
+
+		delete avonProducts.productDetails;
+		 var hasDetails = "productDetails" in avonProducts;
+		 document.writeln(hasDetails);
 		avonProducts.toggleAvailability();
 		var myFruit = "Banana"
 		function myFunc(name, weather)
