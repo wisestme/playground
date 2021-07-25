@@ -9,12 +9,22 @@
 		var myProductArray = ["Chijioke", 8, true];
 		document.writeln("name:" + myProductArray[1]);
 		myProductArray[2] = "Gloria";
-		for(var i = 0; i < myProductArray.length; i++)
+		var productJoiner = myProductArray.join("-");
+		document.writeln(productJoiner);
+		try {
+			for(var i = 0; i <= myProductArray.length; i++)
+				{
+					document.writeln(myProductArray[i]);
+					var anItem = myProductArray[i];
+					document.writeln(anItem);
+				}
+		} catch (e) {
+			document.writeln("Error: " + e);
+		} finally
 		{
-			document.writeln(myProductArray[i]);
-			var anItem = myProductArray[i];
-			document.writeln(anItem);
+			document.writeln("come rain, come shine");
 		}
+		
 		document.writeln(myProductArray[2]);
 		var myData = {
 			name: "Chijioke",
